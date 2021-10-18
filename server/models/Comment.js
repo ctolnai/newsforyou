@@ -9,7 +9,7 @@ const commentSchema = new Schema(
       trim: true
     },
     datePublished: {
-        type: String,
+        type: Date,
         required: true,
         unique: true,
         trim: true
