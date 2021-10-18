@@ -1,0 +1,47 @@
+[
+    {
+        "title": "a",
+        "author": "a",
+        "description": "a",
+        "thumbnail": "a",
+        "article_body": "a",
+        "datePublished": "11111111",
+        "category": "Latest News"
+    },
+    {
+        "title": "b",
+        "author": "b",
+        "description": "b",
+        "thumbnail": "b",
+        "article_body": "b",
+        "datePublished": "22222222",
+        "category": "Politics"
+    },
+    {
+        "title": "c",
+        "author": "c",
+        "description": "c",
+        "thumbnail": "c",
+        "article_body": "c",
+        "datePublished": "33333333",
+        "category": "Entertainment"
+    },
+    {
+        "title": "d",
+        "author": "d",
+        "description": "d",
+        "thumbnail": "d",
+        "article_body": "d",
+        "datePublished": "44444444",
+        "category": "Sports"
+    },
+    {
+        "title": "e",
+        "author": "e",
+        "description": "e",
+        "thumbnail": "e",
+        "article_body": "e",
+        "datePublished": "55555555",
+        "category": "Weather"
+    }
+]
