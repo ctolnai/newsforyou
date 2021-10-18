@@ -6,6 +6,8 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    comments: [Comment]
+    preferences: [Category]
   }
 
   type Auth {
@@ -25,6 +27,12 @@ const typeDefs = gql`
     comments: [Comment]
   }
 
+  type Comment {
+    comment_body: String
+    datePublished: String
+    author: String
+  }
+
   type Category {
     _id: ID
     name: String
@@ -36,6 +44,13 @@ const typeDefs = gql`
   }
 
   type Query {
+    #return all queries
+    users: [User]
+    articles: [Article]
+    comments: [Comment]
+    categories: [Category]
+    tags: [Tag]
+
   }
 
   type Mutation {
