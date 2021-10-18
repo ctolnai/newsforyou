@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/DBNAME', //GOTTA NAME THE DB
+  process.env.MONGODB_URI || 'mongodb://localhost/newsdb',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
