@@ -47,7 +47,7 @@ const typeDefs = gql`
     comments: [Comment]
     tags: [Tag]
     #find by queries
-    user(username: String!): User
+    user(userId: ID!): User
     article(title: String!): Article
     comment(author: String!): [Comment]
     tag(name: String!): Tag    
