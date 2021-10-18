@@ -7,7 +7,7 @@ const typeDefs = gql`
     email: String
     password: String
     comments: [Comment]
-    preferences: [Category]
+    preferences: [String]
   }
 
   type Auth {
@@ -22,7 +22,7 @@ const typeDefs = gql`
     thumbnail: String
     article_body: String
     datePublished: String
-    category: Category
+    category: String
     likes: [User]
     comments: [Comment]
   }
@@ -33,10 +33,7 @@ const typeDefs = gql`
     author: String
   }
 
-  type Category {
-    _id: ID
-    name: String
-  }
+
 
   type Tag {
     _id: ID
@@ -48,8 +45,12 @@ const typeDefs = gql`
     users: [User]
     articles: [Article]
     comments: [Comment]
-    categories: [Category]
     tags: [Tag]
+    #find by queries
+    user(username: String!): User
+    article(title: String!): Article
+    comment(author: String!): [Comment]
+    tag(name: String!): Tag    
 
   }
 
