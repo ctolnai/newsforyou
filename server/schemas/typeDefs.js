@@ -13,6 +13,28 @@ const typeDefs = gql`
     user: User
   }
 
+  type Article {
+    _id: ID
+    author: String
+    description: String
+    thumbnail: String
+    article_body: String
+    datePublished: String
+    category: Category
+    likes: [User]
+    comments: [Comment]
+  }
+
+  type Category {
+    _id: ID
+    name: String
+  }
+
+  type Tag {
+    _id: ID
+    name: String
+  }
+
   type Query {
   }
 
