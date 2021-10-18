@@ -32,12 +32,12 @@ const articleSchema = new Schema(
       required: true,
       trim: true
     },
-    category: [
+    category:
       {
-        type: Schema.Types.ObjectId,
-        ref: 'Category'
-      }
-    ],
+        type: String,
+        required: true,
+        trim: true
+      },
     likes: [
       {
         type: Schema.Types.ObjectId,

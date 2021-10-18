@@ -6,7 +6,7 @@
         "thumbnail": "a",
         "article_body": "a",
         "datePublished": "11111111",
-        "category": "a"
+        "category": "Latest News"
     },
     {
         "title": "b",
@@ -15,7 +15,7 @@
         "thumbnail": "b",
         "article_body": "b",
         "datePublished": "22222222",
-        "category": "b"
+        "category": "Politics"
     },
     {
         "title": "c",
@@ -24,7 +24,7 @@
         "thumbnail": "c",
         "article_body": "c",
         "datePublished": "33333333",
-        "category": "c"
+        "category": "Entertainment"
     },
     {
         "title": "d",
@@ -33,6 +33,15 @@
         "thumbnail": "d",
         "article_body": "d",
         "datePublished": "44444444",
-        "category": "d"
+        "category": "Sports"
+    },
+    {
+        "title": "e",
+        "author": "e",
+        "description": "e",
+        "thumbnail": "e",
+        "article_body": "e",
+        "datePublished": "55555555",
+        "category": "Weather"
     }
 ]

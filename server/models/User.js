@@ -27,8 +27,8 @@ const userSchema = new Schema({
 ],
   preferences: [
     {
-      type: Schema.Types.ObjectId,
-      ref: 'Category'
+      type: String,
+      trim: true
   }
 ]
 });
