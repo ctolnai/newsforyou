@@ -1,10 +1,37 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Article, Tag, Comment} = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-   
+      users: async () => {
+        return User.find({});
+      },
+
+      userById: async (parent, { userId }) => {
+        return User.findOne({_id: userId});
+      },
+      articles: async () => {
+        return Article.find({});
+      },
+      
+      articleById: async (parent, { articleId }) => {
+        return Article.findOne({_id: articleId});
+      },
+      comments: async () => {
+        return Comment.find({});
+      },
+      
+      commentById: async (parent, { commentId }) => {
+        return Comment.findOne({_id: commentId});
+      },
+      // tags: async () => {
+      //   return Tag.find({});
+      // },
+      
+      // user: async (parent, { userId }) => {
+      //   return Tag.findOne({_id: userId});
+      // },
   },
 
   Mutation: {

@@ -19,6 +19,18 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  comments: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Comment'
+  }
+],
+  preferences: [
+    {
+      type: String,
+      trim: true
+  }
+]
 });
 
 userSchema.pre('save', async function (next) {
