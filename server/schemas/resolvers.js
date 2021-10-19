@@ -25,9 +25,9 @@ const resolvers = {
       commentById: async (parent, { commentId }) => {
         return Comment.findOne({_id: commentId});
       },
-      tags: async () => {
-        return Tag.find({});
-      },
+      // tags: async () => {
+      //   return Tag.find({});
+      // },
       
       // user: async (parent, { userId }) => {
       //   return Tag.findOne({_id: userId});
