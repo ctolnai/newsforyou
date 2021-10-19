@@ -7,7 +7,6 @@ const resolvers = {
       users: async () => {
         return User.find({});
       },
-
       userById: async (parent, { userId }) => {
         return User.findOne({_id: userId});
       },
@@ -21,11 +20,9 @@ const resolvers = {
       comments: async () => {
         return Comment.find({});
       },
-      
       commentById: async (parent, { commentId }) => {
         return Comment.findOne({_id: commentId});
       },
-
       articleByCategory: async (parent, { articleCategory }) => {
         return Article.find({category: articleCategory});
       }
@@ -62,6 +59,36 @@ const resolvers = {
       return { token, user };
     },
     
+    removeUser: async( parent, {id}) => {
+      return User.findOneAndDelete({ _id: id })
+
+    },
+
+    // updateUserPreference: async (parent, {preference}, context) => {
+    //   if (context.user) {
+    //     return User.findOneAndUpdate(
+    //       { _id: context.user._id },
+    //       {preferences: preferences,},
+    //       },
+    //       {
+    //         new: true,
+    //         runValidators: true,
+    //       }
+    //     );
+    //   }
+    //   throw new AuthenticationError('You need to be logged in!');
+    // }, 
+
+    updateUserPreferences: async (parent, {id, preferences}) => {
+          return User.findOneAndUpdate(
+            { _id: id },
+            {preferences: preferences,},
+            {
+              new: true,
+              runValidators: true,
+            }
+          );
+          }
   },
 };
 
