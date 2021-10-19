@@ -4,28 +4,28 @@ import Nav from '../components/Nav'
 
 import NewsList from '../components/NewsList';
 
-import { QUERY_NEWS } from '../utils/queries';
+// import { QUERY_NEWS } from '../utils/queries';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_NEWS);
-  const news = data?.news || [];
-
+//   const { loading, data } = useQuery(QUERY_NEWS);
+//   const news = data?.news || [];
+const news = []
   return (
       <>
       <Nav> </Nav>
     <main>
         
-      <div className="flex-row justify-center">
+      {/* <div >
         <div>
           {loading ? (
             <div>Loading...</div>
           ) : (
             <NewsList
-              news={news}
+              news={news.latest}
             />
           )}
         </div>
-      </div>
+      </div> */}
     </main>
   </>
   );
