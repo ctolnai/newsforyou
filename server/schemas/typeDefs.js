@@ -28,6 +28,7 @@ const typeDefs = gql`
   }
 
   type Comment {
+    _id: ID
     comment_body: String
     datePublished: String
     author: String
@@ -46,11 +47,12 @@ const typeDefs = gql`
     articles: [Article]
     comments: [Comment]
     tags: [Tag]
-    #find by queries
-    user(userId: ID!): User
-    article(title: String!): Article
-    comment(author: String!): [Comment]
-    tag(name: String!): Tag    
+    #find by ID
+    userById(userId: ID!): User
+    articleById(articleId: ID!): Article
+    commentById(commentId: ID!): Comment
+    tagById(tagId: ID!): Tag
+    commentByAuthor(author: String!): [Comment]   
 
   }
 
