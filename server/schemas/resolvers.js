@@ -25,6 +25,10 @@ const resolvers = {
       commentById: async (parent, { commentId }) => {
         return Comment.findOne({_id: commentId});
       },
+
+      articleByCategory: async (parent, { articleCategory }) => {
+        return Article.find({category: articleCategory});
+      }
       // tags: async () => {
       //   return Tag.find({});
       // },

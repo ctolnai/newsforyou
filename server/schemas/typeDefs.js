@@ -50,6 +50,7 @@ const typeDefs = gql`
     #find by ID
     userById(userId: ID!): User
     articleById(articleId: ID!): Article
+    articleByCategory(articleCategory: String!): [Article]
     commentById(commentId: ID!): Comment
     tagById(tagId: ID!): Tag
     commentByAuthor(author: String!): [Comment]   
