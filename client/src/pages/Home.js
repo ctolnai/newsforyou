@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import Nav from '../components/Nav'
+import NavBar from '../components/Navbar'
 
 import NewsList from '../components/NewsList';
 
@@ -11,8 +12,8 @@ const Home = () => {
 //   const news = data?.news || [];
 const news = []
   return (
-      <>
-      <Nav> </Nav>
+      <container>
+      <NavBar> </NavBar>
     <main>
         
       {/* <div >
@@ -27,7 +28,7 @@ const news = []
         </div>
       </div> */}
     </main>
-  </>
+  </container>
   );
 };
 
