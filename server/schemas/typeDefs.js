@@ -50,6 +50,7 @@ const typeDefs = gql`
     #find by ID
     userById(userId: ID!): User
     articleById(articleId: ID!): Article
+    articleByCategory(articleCategory: String!): [Article]
     commentById(commentId: ID!): Comment
     tagById(tagId: ID!): Tag
     commentByAuthor(author: String!): [Comment]   
@@ -59,6 +60,8 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    removeUser(id: ID!): User
+    updateUserPreferences(id: ID!, preferences: [String!]): User
   }
 `;
 

@@ -23,15 +23,24 @@ export const LOGIN_USER = gql`
   }
 `;
 export const REMOVE_USER = gql`
-  mutation removeUser($user: String!) {
-    removeUser(user: $user) {
+  mutation removeUser($email: String!, password: String!) {
+    removeUser(username: $username) {
       token
       profile{
           _id
-          name
+          username
       }
       
     }
   }
+`;
+export const UPDATE_PREFERENCES = gql`
+mutation updateUserPreferences($id: ID!, $preferences: [String!]) {
+  updateUserPreferences(id: $id, preferences: $preferences) {
+    _id
+    username
+    preferences
+  }
+}
 `;
 
