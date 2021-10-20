@@ -8,8 +8,14 @@
 }
 
 .nav-link{
-    color:aliceblue
+    color:var(--alice-blue)
 }
 .nav-link span{
     color:var(--amaranth-red)
 }
+.nav-link :hover{
+    color: var(--alice-blue)
+}
+/* .nav-link span :hover{
+    color:var(--amaranth-red)
+} */

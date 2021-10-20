@@ -10,8 +10,7 @@ const NavBar = () => {
     return (
 
 <Navbar collapseOnSelect expand="lg"  bg="dark" variant="dark">
-<Container>
-<Navbar.Brand><Link to ="/" className="nav-link">NF<span>Y</span></Link></Navbar.Brand>
+<Navbar.Brand style = {{ marginLeft: '2%' }}><Link to ="/" className="nav-link">NF<span>Y</span></Link></Navbar.Brand>
 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 <Navbar.Collapse id="responsive-navbar-nav">
   <Nav className="me-auto d-flex justify w-100" justify>
@@ -22,7 +21,6 @@ const NavBar = () => {
     <Nav.Link eventKey={2} href="#weather">Login</Nav.Link>
   </Nav>
 </Navbar.Collapse>
-</Container>
 </Navbar>
   );
   };

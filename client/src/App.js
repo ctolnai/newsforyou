@@ -44,7 +44,6 @@ function App() {
       
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
-          <div className="container">
             <Route exact path="/">
               <Home />
             </Route>
@@ -55,7 +54,6 @@ function App() {
               <Signup />
             </Route>
             <Footer />
-          </div>
         </div>
       </Router>
     </ApolloProvider>

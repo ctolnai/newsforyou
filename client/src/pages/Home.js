@@ -12,8 +12,9 @@ const Home = () => {
 //   const news = data?.news || [];
 const news = []
   return (
+    <>
+    <NavBar> </NavBar>
       <container>
-      <NavBar> </NavBar>
     <main>
         
       {/* <div >
@@ -29,6 +30,7 @@ const news = []
       </div> */}
     </main>
   </container>
+  </>
   );
 };
 
