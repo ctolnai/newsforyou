@@ -1,0 +1,15 @@
+:root{
+    /* CSS HEX */
+--space-cadet: #2b2d42ff;
+--manatee: #8d99aeff;
+--alice-blue: #edf2f4ff;
+--imperial-red: #ef233cff;
+--amaranth-red: #d90429ff;
+}
+
+.nav-link{
+    color:aliceblue
+}
+.nav-link span{
+    color:var(--amaranth-red)
+}
