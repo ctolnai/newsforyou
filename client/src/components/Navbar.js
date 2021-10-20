@@ -17,12 +17,9 @@ const NavBar = () => {
   <Nav className="me-auto d-flex justify w-100" justify>
     <Nav.Link href="/latestnews">Latest News</Nav.Link>
     <Nav.Link href="/entertainment">Entertainment</Nav.Link>
-    
-  
     <Nav.Link href="/politics">Politics</Nav.Link>
-    <Nav.Link eventKey={2} href="#weather">
-      Sports
-    </Nav.Link>
+    <Nav.Link eventKey={2} href="#weather">Sports</Nav.Link>
+    <Nav.Link eventKey={2} href="#weather">Login</Nav.Link>
   </Nav>
 </Navbar.Collapse>
 </Container>
