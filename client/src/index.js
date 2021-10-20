@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './normalize.css';
+import './style.css';
 import 'semantic-ui-css/semantic.min.css'
 import App from './App';
 
