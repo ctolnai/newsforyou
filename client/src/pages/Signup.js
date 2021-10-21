@@ -57,8 +57,8 @@ const Signup = () => {
                 </Form.Text>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicFullName">
-                <Form.Label>Full Name</Form.Label>
-                <Form.Control name="username" type="text" placeholder="Enter Full Name" value={formState.username}
+                <Form.Label>Username</Form.Label>
+                <Form.Control name="username" type="text" placeholder="Enter Username" value={formState.username}
                   onChange={handleChange}/>
                 <Form.Text className="text-muted">
                 </Form.Text>
@@ -67,9 +67,6 @@ const Signup = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control name="password" type="password" placeholder="Password" value={formState.password}
                   onChange={handleChange}/>
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
               </Form.Group>
               <Button variant="primary" type="submit">
                 Submit
