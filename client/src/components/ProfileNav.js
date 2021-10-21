@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '../style.css'
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap/';
 
-const NavBar = () => {
+const profileNav = () => {
     return (
 
 <Navbar collapseOnSelect expand="lg"  bg="dark" variant="dark">
@@ -17,12 +17,12 @@ const NavBar = () => {
     <Nav.Link href="/entertainment">Entertainment</Nav.Link>
     <Nav.Link href="/politics">Politics</Nav.Link>
     <Nav.Link eventKey={2} href="/sports">Sports</Nav.Link>
-    <Nav.Link eventKey={2} href="/profile">Login</Nav.Link>
+    <Nav.Link eventKey={2} href="/login">Login</Nav.Link>
   </Nav>
 </Navbar.Collapse>
 </Navbar>
   );
   };
   
-  export default NavBar;
+  export default profileNav;
          
