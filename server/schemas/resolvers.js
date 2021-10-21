@@ -25,6 +25,9 @@ const resolvers = {
       },
       articleByCategory: async (parent, { articleCategory }) => {
         return Article.find({category: articleCategory}).limit(4);
+      },
+      articleByCategoryNoLimit: async (parent, { articleCategory }) => {
+        return Article.find({category: articleCategory});
       }
       // tags: async () => {
       //   return Tag.find({});
