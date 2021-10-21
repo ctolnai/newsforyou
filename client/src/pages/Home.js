@@ -5,7 +5,6 @@ import Showcase from '../components/Showcase'
 import '../style.css'
 
 
-import NewsList from '../components/NewsList';
 
 // import { QUERY_NEWS } from '../utils/queries';
 
