@@ -11,7 +11,7 @@ const divStyle = {
 
 function Footer() {
     return (
-        <div>
+        <div >
         <Nav className="footer" activeKey="/home">
             <Nav.Item>
                 © 2021 NFY, Inc.
