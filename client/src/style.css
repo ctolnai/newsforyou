@@ -8,7 +8,8 @@
 }
 
 .nav-link{
-    color:var(--alice-blue)
+    color:var(--alice-blue);
+    
 }
 .nav-link span{
     color:var(--amaranth-red)
@@ -64,7 +65,8 @@
     background-color: var(--alice-blue);
     display: flex;
     justify-content: space-evenly;
-    
+    height: 20vh;
+    border-bottom: 2px solid var(--manatee) ;
 }
 
 .card{
@@ -80,4 +82,8 @@
 
 .card-title span{
     color: var(--amaranth-red)
+}
+
+.btn:hover{
+    background-color:var(--manatee)
 }

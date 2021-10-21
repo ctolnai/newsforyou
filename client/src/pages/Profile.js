@@ -48,21 +48,21 @@ const Profile = () => {
         <Row className="useremail">
         <Col className="userhero d-flex justify-content-spacebetween p-5">
             <h2 className="">User Email</h2>
-            <button type="button" class="btn btn-outline-dark">Edit</button>
+            <button type="button" class="btn btn-outline-dark btn-lg">Edit</button>
 
           </Col>
         </Row>
         <Row className="username">
         <Col className="userhero d-flex justify-content-spacebetween p-5">
             <h2 className="">UserName</h2>
-            <button type="button" class="btn btn-outline-dark">Edit</button>
+            <button type="button" class="btn btn-outline-dark btn-lg">Edit</button>
 
           </Col>
         </Row>
         <Row className="name">
         <Col className="userhero d-flex justify-content-spacebetween p-5">
             <h2 className="">Name</h2>
-            <button type="button" class="btn btn-outline-dark">Edit</button>
+            <button type="button" class="btn btn-outline-dark btn-lg">Edit</button>
 
           </Col>
         </Row>
