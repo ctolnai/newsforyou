@@ -27,12 +27,14 @@
 
 .userhero, .useremail, .username, .name
 {
+    
     display: flex;
     justify-content: center;
     align-items: center;
     width:100%;
     height: 20vh;
-    border-bottom:1px solid black;
+    border-bottom: 1px solid var(--manatee);
+     
 }
 
 .profileBody{
@@ -40,3 +42,7 @@
     background-color: var(--alice-blue);
 }
 
+.showcaseBody{
+    background-color: var(--alice-blue);
+    height: 100vh;
+}

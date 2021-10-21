@@ -1,6 +1,9 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import NavBar from '../components/Navbar'
+import Showcase from '../components/Showcase'
+import '../style.css'
+
 
 import NewsList from '../components/NewsList';
 
@@ -13,22 +16,7 @@ const news = []
   return (
     <>
     <NavBar> </NavBar>
-      <container>
-    <main>
-        
-      {/* <div >
-        <div>
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <NewsList
-              news={news.latest}
-            />
-          )}
-        </div>
-      </div> */}
-    </main>
-  </container>
+   <Showcase> </Showcase>
   </>
   );
 };
