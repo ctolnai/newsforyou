@@ -1,6 +1,7 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { Nav } from 'react-bootstrap/';
+const style = { color: "white", fontSize: "1em" }
 
 
 const divStyle = {
@@ -15,13 +16,13 @@ function Footer() {
                 © 2021 NFY, Inc.
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/#"><SocialIcon url="https://twitter.com/" network="twitter" /></Nav.Link>
+                <Nav.Link href="/#"><SocialIcon url="https://twitter.com/" network="twitter" style={style} /></Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/#"><SocialIcon url="https://facebook.com" network="facebook" /></Nav.Link>
+                <Nav.Link href="/#"><SocialIcon url="https://facebook.com" network="facebook" style={style} /></Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/#"><SocialIcon url="https://instagram.com" network="instagram" /></Nav.Link>
+                <Nav.Link href="/#"><SocialIcon url="https://instagram.com" network="instagram" style={style} /></Nav.Link>
             </Nav.Item>
         </Nav>
     );

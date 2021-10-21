@@ -24,3 +24,7 @@
     color: aliceblue;
    background-color: var(--space-cadet);
 }
+
+.social{
+    size: 18;
+}
