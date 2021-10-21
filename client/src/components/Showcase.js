@@ -10,7 +10,7 @@ const Showcase = ({ news }) => {
   // }
 
   return (
-    <Container>
+    <Container className ="showcaseCon">
     <Row>
       <Col sm={12} md={4} className = "trending">
 

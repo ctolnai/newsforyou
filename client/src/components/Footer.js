@@ -11,8 +11,8 @@ const divStyle = {
 
 function Footer() {
     return (
-        <Nav className="justify-content-end footer" activeKey="/home">
-            <Nav.Item style={divStyle}>
+        <Nav className="d-flex justify-content-spacebetween footer" activeKey="/home">
+            <Nav.Item>
                 © 2021 NFY, Inc.
             </Nav.Item>
             <Nav.Item>
