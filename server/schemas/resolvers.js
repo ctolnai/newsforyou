@@ -24,7 +24,7 @@ const resolvers = {
         return Comment.findOne({_id: commentId});
       },
       articleByCategory: async (parent, { articleCategory }) => {
-        return Article.find({category: articleCategory});
+        return Article.find({category: articleCategory}).limit(4);
       }
       // tags: async () => {
       //   return Tag.find({});
