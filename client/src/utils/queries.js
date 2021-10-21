@@ -29,6 +29,7 @@ export const QUERY_ARTICLES = gql`
   query articles {
     articles {
         _id
+        title
         author
         description
         thumbnail
@@ -43,6 +44,7 @@ export const QUERY_SINGLE_ARTICLE = gql`
   query articleById($articleId: ID!) {
     articleById(articleId: $articleId) {
         _id
+        title
         author
         description
         thumbnail
@@ -79,6 +81,7 @@ export const QUERY_COMMENTS = gql`
   query articleByCategory($articleCategory: String!) {
     articleByCategory(articleCategory: $articleCategory) {
         _id
+        title
         author
         description
         thumbnail

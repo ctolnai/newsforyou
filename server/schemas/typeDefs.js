@@ -17,6 +17,7 @@ const typeDefs = gql`
 
   type Article {
     _id: ID
+    title: String
     author: String
     description: String
     thumbnail: String

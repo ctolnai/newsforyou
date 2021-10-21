@@ -15,9 +15,9 @@ const Home = () => {
 const news = []
   return (
     <>
-    <NavBar> </NavBar>
-    <Header></Header>
-   <Showcase> </Showcase>
+    <NavBar/> 
+    <Header/>
+   <Showcase/>
   </>
   );
 };
