@@ -1,6 +1,5 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import Nav from '../components/Nav'
 import NavBar from '../components/Navbar'
 
 import NewsList from '../components/NewsList';

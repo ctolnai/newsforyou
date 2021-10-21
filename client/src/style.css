@@ -25,6 +25,16 @@
    background-color: var(--space-cadet);
 }
 
-.social{
-    size: 18;
+.userhero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 20vh;
+    border: solid 2px black;
 }
+
+.profileBody{
+    background-color: var(--alice-blue);
+}
+
