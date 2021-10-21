@@ -17,5 +17,10 @@
     color: var(--alice-blue)
 }
 .footer{
-    background-color: var(--space-cadet);
+    position:absolute;
+    bottom: 0;
+    right:0;
+    width: 100vw;
+    color: aliceblue;
+   background-color: var(--space-cadet);
 }

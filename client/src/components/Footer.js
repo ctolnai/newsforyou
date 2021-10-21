@@ -2,6 +2,7 @@ import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { Nav } from 'react-bootstrap/';
 
+
 const divStyle = {
     paddingTop: "20px",
     margin: "0 auto"
@@ -9,7 +10,7 @@ const divStyle = {
 
 function Footer() {
     return (
-        <Nav className="justify-content-end" activeKey="/home">
+        <Nav className="justify-content-end footer" activeKey="/home">
             <Nav.Item style={divStyle}>
                 © 2021 NFY, Inc.
             </Nav.Item>
