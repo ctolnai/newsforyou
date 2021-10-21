@@ -46,3 +46,8 @@
     background-color: var(--alice-blue);
     height: 100vh;
 }
+
+.userhero{
+    display: flex;
+    justify-content: space-between;
+}

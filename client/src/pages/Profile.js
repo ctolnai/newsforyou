@@ -39,24 +39,31 @@ const Profile = () => {
       {/* <profileNav> </profileNav> */}
 
       <body className="profileBody">
-        <Row className="userhero d-flex justify-content-center">
-          <Col>
+        <Row >
+          <Col className="userhero d-flex justify-content-center">
             <h1 className="">User Name</h1>
+
           </Col>
         </Row>
         <Row className="useremail">
-          <Col>
-            <h1 className="">User Email</h1>
+        <Col className="userhero d-flex justify-content-spacebetween p-5">
+            <h2 className="">User Email</h2>
+            <button type="button" class="btn btn-outline-dark">Edit</button>
+
           </Col>
         </Row>
         <Row className="username">
-          <Col>
+        <Col className="userhero d-flex justify-content-spacebetween p-5">
             <h1 className="">UserName</h1>
+            <button type="button" class="btn btn-outline-dark">Edit</button>
+
           </Col>
         </Row>
         <Row className="name">
-          <Col>
+        <Col className="userhero d-flex justify-content-spacebetween p-5">
             <h1 className="">Name</h1>
+            <button type="button" class="btn btn-outline-dark">Edit</button>
+
           </Col>
         </Row>
       </body>
