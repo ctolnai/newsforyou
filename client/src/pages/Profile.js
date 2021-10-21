@@ -12,6 +12,7 @@ import {
   NavDropdown,
   Row,
   Col,
+  Stack
 } from 'react-bootstrap/';
 
 const Profile = () => {
@@ -47,7 +48,8 @@ const Profile = () => {
         </Row>
         <Row className="useremail">
         <Col className="userhero d-flex justify-content-spacebetween p-5">
-            <h2 className="">User Email</h2>
+
+           <h2 className="">User Email</h2>
             <button type="button" class="btn btn-outline-dark btn-lg">Edit</button>
 
           </Col>

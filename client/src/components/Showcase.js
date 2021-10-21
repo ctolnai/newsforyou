@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../style.css'
+import { Row, Container, Col } from 'react-bootstrap/';
 
 
 const Showcase = ({ news }) => {
@@ -9,24 +10,21 @@ const Showcase = ({ news }) => {
   // }
 
   return (
-      <div className="showcaseBody">
-        {/* {
-          news.map((article) => (
-            <div key={article._id} >
-              <div>
-                <h4>
-                  {article.name} <br />
-                </h4>
-                <p>{ article.body }</p>
-                <Link
-              
-                  to={`/news/${article._id}`}
-                >
-                </Link>
-              </div>
-            </div>
-          ))} */}
-      </div>
+    <Container>
+    <Row>
+      <Col sm={12} md={4}>
+
+      </Col>
+      <Col sm={12} md={4}>
+
+      </Col>
+      <Col sm={12} md={4}>
+
+      </Col>
+      
+    </Row>
+   
+  </Container>
   );
 };
 
