@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import '../style.css'
 import { Row, Container, Col } from 'react-bootstrap/';
 import Sports from "./Sports"
+import LatestNews from "./LatestNews"
+import Entertainment from "./Entertainment"
 
 
 const Showcase = ({ news }) => {
@@ -17,10 +19,10 @@ const Showcase = ({ news }) => {
 <Sports />
       </Col>
       <Col sm={12} md={4} className = "headline">
-column 2
+<LatestNews />
       </Col>
       <Col sm={12} md={4} className = "latest">
-column 3
+<Entertainment />
       </Col>
       
     </Row>
