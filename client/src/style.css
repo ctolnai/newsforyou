@@ -16,6 +16,6 @@
 .nav-link :hover{
     color: var(--alice-blue)
 }
-/* .nav-link span :hover{
-    color:var(--amaranth-red)
-} */
+.footer{
+    background-color: var(--space-cadet);
+}
