@@ -29,3 +29,19 @@ const NavBar = () => {
   
   export default NavBar;
          
+  // return (
+
+// const user = null;
+
+//     <Toolbar className={classes.toolbar}>
+//       {user?.result ? (
+//         <div className={classes.profile}>
+        
+//           <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
+//         </div>
+//       ) : (
+//         <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
+//       )}
+//     </Toolbar>
+//   </AppBar>
+// );
