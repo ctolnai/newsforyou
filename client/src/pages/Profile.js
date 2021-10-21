@@ -39,9 +39,24 @@ const Profile = () => {
       {/* <profileNav> </profileNav> */}
 
       <body className="profileBody">
-        <Row className="userhero">
+        <Row className="userhero d-flex justify-content-center">
           <Col>
             <h1 className="">User Name</h1>
+          </Col>
+        </Row>
+        <Row className="useremail">
+          <Col>
+            <h1 className="">User Email</h1>
+          </Col>
+        </Row>
+        <Row className="username">
+          <Col>
+            <h1 className="">UserName</h1>
+          </Col>
+        </Row>
+        <Row className="name">
+          <Col>
+            <h1 className="">Name</h1>
           </Col>
         </Row>
       </body>

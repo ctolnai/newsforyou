@@ -25,16 +25,18 @@
    background-color: var(--space-cadet);
 }
 
-.userhero{
+.userhero, .useremail, .username, .name
+{
     display: flex;
     justify-content: center;
     align-items: center;
     width:100%;
     height: 20vh;
-    border: solid 2px black;
+    border-bottom:1px solid black;
 }
 
 .profileBody{
+    height:100vh;
     background-color: var(--alice-blue);
 }
 
