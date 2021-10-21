@@ -91,7 +91,19 @@ const resolvers = {
               runValidators: true,
             }
           );
-          }
+          },
+    updateUser: async (parent, {id, username, email, password}) => {
+      return User.findOneAndUpdate (
+        { _id: id},
+        {username: username},
+        {email: email},
+        {password: password},
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    }
   },
 };
 

@@ -64,6 +64,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     removeUser(id: ID!): User
     updateUserPreferences(id: ID!, preferences: [String!]): User
+    updateUser(username: String, email: String, password: String): User
   }
 `;
 
