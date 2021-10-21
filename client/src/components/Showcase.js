@@ -4,6 +4,7 @@ import '../style.css'
 import { Row, Container, Col } from 'react-bootstrap/';
 import Sports from "./Sports"
 import LatestNews from "./LatestNews"
+import Entertainment from "./Entertainment"
 
 
 const Showcase = ({ news }) => {
@@ -21,7 +22,7 @@ const Showcase = ({ news }) => {
 <LatestNews />
       </Col>
       <Col sm={12} md={4} className = "latest">
-column 3
+<Entertainment />
       </Col>
       
     </Row>

@@ -41,4 +41,4 @@ function LatestNews() {
     )
 }
 
-export default Latest News;
+export default LatestNews;
