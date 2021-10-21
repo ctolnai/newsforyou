@@ -17,6 +17,9 @@ import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import LatestNews from './pages/LatestNews'
+import Entertainment from './pages/Entertainment';
+import Politics from './pages/Politics';
+import Sports from './pages/Sports';
 
 
 
@@ -60,6 +63,15 @@ function App() {
             </Route>
             <Route exact path="/latestnews">
               <LatestNews />
+            </Route>
+            <Route exact path="/entertainment">
+              <Entertainment />
+            </Route>
+            <Route exact path="/politics">
+              <Politics />
+            </Route>
+            <Route exact path="/sports">
+              <Sports />
             </Route>
         </div>
         <Footer />
