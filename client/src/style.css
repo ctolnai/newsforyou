@@ -18,9 +18,10 @@
     color: var(--alice-blue)
 }
 .footer{
-    position:fixed;
+    position: fixed;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     bottom: 0;
     right:0;
     width: 100vw;
