@@ -60,7 +60,23 @@
 }
 
 .headerbody{
-    /* height:100vh; */
     background-color: var(--alice-blue);
+    display: flex;
+    justify-content: space-evenly;
     
+}
+
+.card{
+    width: 20vw;
+    height: 10vh;
+}
+.card-body{
+    background-color: var(--manatee);
+    color:var(--alice-blue);
+    filter: drop-shadow(0 5px 5px #6c757d);
+
+}
+
+.card-title span{
+    color: var(--amaranth-red)
 }
