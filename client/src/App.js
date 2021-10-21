@@ -16,6 +16,7 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import LatestNews from './pages/LatestNews'
 
 
 
@@ -57,8 +58,11 @@ function App() {
             <Route exact path="/profile">
               <Profile />
             </Route>
-            <Footer />
+            <Route exact path="/latestnews">
+              <LatestNews />
+            </Route>
         </div>
+        <Footer />
       </Router>
     </ApolloProvider>
   );

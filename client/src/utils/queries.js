@@ -91,3 +91,18 @@ export const QUERY_COMMENTS = gql`
     }
   }
   `;
+
+  export const QUERY_ARTICLES_CATEGORY_NO_LIMIT = gql`
+  query articleByCategory($articleCategory: String!) {
+    articleByCategory(articleCategory: $articleCategory) {
+        _id
+        title
+        author
+        description
+        thumbnail
+        article_body
+        datePublished
+    		category
+    }
+  }
+  `;

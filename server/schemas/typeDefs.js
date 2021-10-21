@@ -52,6 +52,7 @@ const typeDefs = gql`
     userById(userId: ID!): User
     articleById(articleId: ID!): Article
     articleByCategory(articleCategory: String!): [Article]
+    articleByCategoryNoLimit(articleCategory: String!): [Article]
     commentById(commentId: ID!): Comment
     tagById(tagId: ID!): Tag
     commentByAuthor(author: String!): [Comment]   
