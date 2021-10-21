@@ -27,7 +27,7 @@ const Profile = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto d-flex justify w-100" justify>
             <Nav.Link href="#">Newsletter</Nav.Link>
-            <Nav.Link eventKey={2} href="#">
+            <Nav.Link eventKey={2} href="mailto:name@rapidtables.com">
               Contact Us
             </Nav.Link>
             <Nav.Link eventKey={2} href="#">
@@ -54,14 +54,14 @@ const Profile = () => {
         </Row>
         <Row className="username">
         <Col className="userhero d-flex justify-content-spacebetween p-5">
-            <h1 className="">UserName</h1>
+            <h2 className="">UserName</h2>
             <button type="button" class="btn btn-outline-dark">Edit</button>
 
           </Col>
         </Row>
         <Row className="name">
         <Col className="userhero d-flex justify-content-spacebetween p-5">
-            <h1 className="">Name</h1>
+            <h2 className="">Name</h2>
             <button type="button" class="btn btn-outline-dark">Edit</button>
 
           </Col>

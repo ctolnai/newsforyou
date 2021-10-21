@@ -40,6 +40,7 @@
 .profileBody{
     height:100vh;
     background-color: var(--alice-blue);
+    
 }
 
 .showcaseBody{
@@ -50,4 +51,10 @@
 .userhero{
     display: flex;
     justify-content: space-between;
+}
+
+.userhero h1{
+    font-size: 48px;
+    font-weight: 400;
+    filter: drop-shadow(0 2px var(--manatee));
 }
