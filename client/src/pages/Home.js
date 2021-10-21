@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import NavBar from '../components/Navbar'
 import Showcase from '../components/Showcase'
+import Header from '../components/Header'
 import '../style.css'
 
 
@@ -15,6 +16,7 @@ const news = []
   return (
     <>
     <NavBar> </NavBar>
+    <Header></Header>
    <Showcase> </Showcase>
   </>
   );
