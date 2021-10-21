@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '../style.css'
-import { Navbar, Container, Nav, NavDropdown, Modal, Button } from 'react-bootstrap/';
+import { Navbar, Container, Nav, NavDropdown, Modal, Button, Form } from 'react-bootstrap/';
 
 
 function MyVerticallyCenteredModal(props) {
@@ -16,16 +16,36 @@ function MyVerticallyCenteredModal(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          Sign Up
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+      <Form>
+  <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label>Email address</Form.Label>
+    <Form.Control type="email" placeholder="Enter email" />
+    <Form.Text className="text-muted">
+      We'll never share your email with anyone else.
+    </Form.Text>
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="formBasicFullName">
+    <Form.Label>Full Name</Form.Label>
+    <Form.Control type="text" placeholder="Enter Full Name" />
+    <Form.Text className="text-muted">
+    </Form.Text>
+  </Form.Group>
+
+  <Form.Group className="mb-3" controlId="formBasicPassword">
+    <Form.Label>Password</Form.Label>
+    <Form.Control type="password" placeholder="Password" />
+  </Form.Group>
+  <Form.Group className="mb-3" controlId="formBasicCheckbox">
+    <Form.Check type="checkbox" label="Check me out" />
+  </Form.Group>
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
+</Form>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>
@@ -49,10 +69,8 @@ const NavBar = () => {
     <Nav.Link href="/entertainment">Entertainment</Nav.Link>
     <Nav.Link href="/politics">Politics</Nav.Link>
     <Nav.Link eventKey={2} href="/sports">Sports</Nav.Link>
-    {/* <Nav.Link eventKey={2} onClick = {modalLoader}> Login</Nav.Link> */}
-    <Button variant="primary" onClick={() => setModalShow(true)}>
-        Launch vertically centered modal
-      </Button>
+    <Nav.Link eventKey={2}  onClick={() => setModalShow(true)}> Login</Nav.Link>
+    
       <MyVerticallyCenteredModal
         show={modalShow}
         onHide={() => setModalShow(false)}
