@@ -101,5 +101,8 @@
 }
 
 .newscard{
-    background-color:var(--amaranth-red)
+    background-color:var(--amaranth-red);
+   display: flex;
+   justify-content: center
 }
+
