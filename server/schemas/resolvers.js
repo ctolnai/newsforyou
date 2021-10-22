@@ -7,8 +7,10 @@ const resolvers = {
       users: async () => {
         return User.find({});
       },
-      userById: async (parent, { userId }) => {
-        return User.findOne({_id: userId});
+      userById: async (parent, args, context) => {
+        if (context.user){
+        return User.findOne({_id: context.user._id});
+      }
       },
       articles: async () => {
         return Article.find({});
@@ -91,7 +93,17 @@ const resolvers = {
               runValidators: true,
             }
           );
-          }
+          },
+    updateUser: async (parent, args, context) => {
+      return User.findOneAndUpdate (
+        { _id: context.user._id},
+        {$set: args},
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    }
   },
 };
 
