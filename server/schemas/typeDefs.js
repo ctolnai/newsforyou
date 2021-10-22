@@ -49,7 +49,7 @@ const typeDefs = gql`
     comments: [Comment]
     tags: [Tag]
     #find by ID
-    userById(userId: ID!): User
+    userById: User
     articleById(articleId: ID!): Article
     articleByCategory(articleCategory: String!): [Article]
     articleByCategoryNoLimit(articleCategory: String!): [Article]
@@ -64,6 +64,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     removeUser(id: ID!): User
     updateUserPreferences(id: ID!, preferences: [String!]): User
+    updateUser(username: String, email: String, password: String): User
   }
 `;
 
