@@ -7,8 +7,10 @@ const resolvers = {
       users: async () => {
         return User.find({});
       },
-      userById: async (parent, { userId }) => {
-        return User.findOne({_id: userId});
+      userById: async (parent, args, context) => {
+        if (context.user){
+        return User.findOne({_id: context.user._id});
+      }
       },
       articles: async () => {
         return Article.find({});
@@ -95,9 +97,7 @@ const resolvers = {
     updateUser: async (parent, {id, username, email, password}) => {
       return User.findOneAndUpdate (
         { _id: id},
-        {username: username},
-        {email: email},
-        {password: password},
+        {username: username, email: email, password: password},
         {
           new: true,
           runValidators: true,
