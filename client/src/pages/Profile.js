@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { QUERY_SINGLE_USER } from '../utils/queries';
 import Auth from '../utils/auth';
-// import { UPDATE_USER } from '../utils/mutations';
+import { UPDATE_USER } from '../utils/mutations';
 import '../style.css';
 import {
   Navbar,
@@ -32,7 +32,7 @@ const Profile = () => {
 
 
   const [formState, setFormState] = useState({ username: '', email: '', password: '' });
-  // const [login, { error, name }] = useMutation(UPDATE_USER);
+  const [updateUser, { error, name }] = useMutation(UPDATE_USER);
   useEffect(() => {  
     console.log(userData)  
     setFormState({ username: userData.username, email: userData.email, password: userData.password })
@@ -41,28 +41,28 @@ const Profile = () => {
   // update state based on form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
+    console.log(value)
 
     setFormState({
-      ...formState,
+      // ...formState,
       [name]: value,
     });
   };
 
   // submit form
-  // const handleFormSubmit = async (event) => {
-  //   event.preventDefault();
-  //   console.log(formState);
-  //   try {
-  //     const { data } = await login({
-  //       variables: { ...formState },
-  //     });
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+    try {
+      const { data } = await updateUser({
+        variables: { ...formState },
+      });
 
-  //     Auth.login(data.login.token);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
+    } catch (e) {
+      console.error(e);
+    }
 
-  // };
+  };
 
   return (
 
@@ -72,7 +72,7 @@ const Profile = () => {
               <div>Loading...</div>
             
             ) : (
-              <Form >
+              <Form onSubmit= {handleFormSubmit}>
              <Form.Group className="mb-3" controlId="formBasicUsername">
                 <Form.Label>Username</Form.Label>
                 <Form.Control type="username" placeholder="Enter username" value={formState.username}

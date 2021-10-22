@@ -94,10 +94,10 @@ const resolvers = {
             }
           );
           },
-    updateUser: async (parent, {id, username, email, password}) => {
+    updateUser: async (parent, args, context) => {
       return User.findOneAndUpdate (
-        { _id: id},
-        {username: username, email: email, password: password},
+        { _id: context.user._id},
+        {$set: args},
         {
           new: true,
           runValidators: true,
