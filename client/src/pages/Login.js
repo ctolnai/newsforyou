@@ -42,11 +42,7 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
+    <div>
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -58,17 +54,11 @@ const Login = (props) => {
                 <Form.Label>Email address</Form.Label>
                 <Form.Control type="email" placeholder="Enter email" value={formState.email}
                   onChange={handleChange}/>
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" value={formState.password}
                   onChange={handleChange}/>
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
               </Form.Group>
               <Button variant="primary" type="submit">
                 Submit
@@ -82,9 +72,6 @@ const Login = (props) => {
               </div>
             )}
           </div>
-        </div>
-      </div>
-    </main>
   );
 };
 

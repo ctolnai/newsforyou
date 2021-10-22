@@ -33,7 +33,7 @@ function Sports() {
             <div style={{justifyContent: 'center', margin: '15px', display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
             {articles.map(article => (
                 <Card style={{ width: '18rem', height: 'auto', justifyContent: 'space-between', margin: '15px'}}>
-                    <Card.Img variant="top" src={article.thumbnail} />
+                    <Card.Img variant="top" src={article.thumbnail}  width="200" height="200"/>
                     <Card.Body>
                         <Card.Title>{article.title}</Card.Title>
                         <Card.Text>
