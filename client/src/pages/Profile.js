@@ -88,12 +88,12 @@ const Profile = ({userData}) => {
               <Form onSubmit= {handleFormSubmit}>
              <Form.Group className="mb-3" controlId="formBasicUsername">
                 <Form.Label>Username</Form.Label>
-                <Form.Control type="username" placeholder="Enter username" value={formState.username}
+                <Form.Control name= "username" type="username" placeholder="Enter username" value={formState.username}
                   onChange={handleChange}/>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" value={formState.email}
+                <Form.Control name= "email" type="email" placeholder="Enter email" value={formState.email}
                   onChange={handleChange}/>
               </Form.Group>
               {/* <Form.Group className="mb-3" controlId="formBasicPassword">
