@@ -97,4 +97,9 @@
 
 .app{
     background-color: var(--alice-blue);
+    height: 300vh;
+}
+
+.newscard{
+    background-color:var(--amaranth-red)
 }
