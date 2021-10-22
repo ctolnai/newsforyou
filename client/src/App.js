@@ -48,7 +48,7 @@ function App() {
     <ApolloProvider client={client}>
       
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
+        <div className="app flex-column justify-flex-start">
             <Route exact path="/">
               <Home />
             </Route>

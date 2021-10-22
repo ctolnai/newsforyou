@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap/';
 import { useQuery } from '@apollo/client';
 import { QUERY_ARTICLES_CATEGORY } from '../utils/queries';
+import '../style.css';
+
 
 function Sports() {
     useEffect(() => {
@@ -21,8 +23,8 @@ function Sports() {
 
     return (
         <div>
-            <Card style={{ width: '18rem', height: 'auto', justifyContent: 'center', margin: '15px'}}>
-                <Card.Body style={{backgroundColor: 'red'}}>SPORTS</Card.Body>
+            <Card style={{ width: '18rem', height: 'auto', justifyContent: 'space-evenly', margin: '15px'}} className = "newscardheader">
+                <Card.Body className = "newscard">SPORTS</Card.Body>
             </Card>
             {articles.map(article => (
                 <Card style={{ width: '18rem', height: 'auto', justifyContent: 'center', margin: '15px' }}>
