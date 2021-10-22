@@ -20,24 +20,42 @@ import {
   Stack
 } from 'react-bootstrap/';
 
-const Profile = () => {
+
+const UserData = () => {
+
+  const { loading, data } = useQuery(QUERY_SINGLE_USER);
+  const userData = !loading? data.userById: []
+  if (loading) {
+    return (<div> Loading... </div>)
+  } {
+    console.log(userData)
+  return (
+<Profile userData = {userData}/>
+  )}
+}
+
+
+const Profile = ({userData}) => {
 
   // NEED TO RUN QUERY_USER AND RETURN DATA AS C_USERNAME C_EMAIL C_PASSWORD
   // THEN SET THE BELOW CODE TO SET THE DEFAULT VALUES TO THE RETURNED DATA
   // WHEN UPDATE_USER IS PUSHED, PUSHED VALUES SHOULD BE EQUAL TO THE STORED VALUES UNLES THEY WERE CHANGED IN UI 
 
-  const { loading, data } = useQuery(QUERY_SINGLE_USER);
-  const userData = !loading? data.userById: []
+  // const { loading, data } = useQuery(QUERY_SINGLE_USER);
+  // const userData = !loading? data.userById: []
 
 
-
-  const [formState, setFormState] = useState({ username: '', email: '', password: '' });
-  const [updateUser, { error, name }] = useMutation(UPDATE_USER);
+// , password: '' 
+  const [formState, setFormState] = useState({ username: '', email: ''});
+  const [updateUser, { error, data }] = useMutation(UPDATE_USER);
   useEffect(() => {  
-    console.log(userData)  
-    setFormState({ username: userData.username, email: userData.email, password: userData.password })
+    console.log(userData.username)  
+    setFormState({ username: userData.username, email: userData.email})
   }, [data])
 
+
+
+  // password: userData.password
   // update state based on form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -57,7 +75,6 @@ const Profile = () => {
       const { data } = await updateUser({
         variables: { ...formState },
       });
-
     } catch (e) {
       console.error(e);
     }
@@ -67,11 +84,7 @@ const Profile = () => {
   return (
 
     <div>
-            {loading ? ( 
-              
-              <div>Loading...</div>
             
-            ) : (
               <Form onSubmit= {handleFormSubmit}>
              <Form.Group className="mb-3" controlId="formBasicUsername">
                 <Form.Label>Username</Form.Label>
@@ -83,17 +96,17 @@ const Profile = () => {
                 <Form.Control type="email" placeholder="Enter email" value={formState.email}
                   onChange={handleChange}/>
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              {/* <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" value={formState.password}
                   onChange={handleChange}/>
-              </Form.Group>
+              </Form.Group> */}
               
               <Button variant="primary" type="submit">
                 Submit
               </Button>
             </Form>
-            )}
+            
 
             {/* {error && (
               <div className="my-3 p-3 bg-danger text-white">
@@ -161,4 +174,4 @@ const Profile = () => {
   // );
 };
 
-export default Profile;
+export default UserData;
