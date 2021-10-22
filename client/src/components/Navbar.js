@@ -13,6 +13,7 @@ import {
   Form,
 } from 'react-bootstrap/';
 import Signup from '../pages/Signup';
+import Auth from '../utils/auth';
 
 function MyOtherModal(props) {
   return (
@@ -102,10 +103,15 @@ const NavBar = () => {
           <Nav.Link eventKey={2} href="/sports">
             Sports
           </Nav.Link>
+          {
+            Auth.loggedIn() ? 
+          <Nav.Link eventKey={2} href="/profile">
+            Dashboard
+          </Nav.Link>:
           <Nav.Link eventKey={2} onClick={() => setModalShow(true)}>
-            {' '}
             Sign Up
           </Nav.Link>
+          }
           {/* <Nav.Link eventKey={2}  onClick={() => setModalShow(true)}> Login</Nav.Link> */}
           <MyVerticallyCenteredModal
             show={modalShow}
