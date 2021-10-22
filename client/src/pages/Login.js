@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
@@ -7,6 +7,9 @@ import { Navbar, Container, Nav, NavDropdown, Modal, Button, Form } from 'react-
 import Auth from '../utils/auth';
 
 const Login = (props) => {
+  useEffect(()=>{
+console.log(formState)
+  })
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
@@ -52,12 +55,12 @@ const Login = (props) => {
               <Form onSubmit={handleFormSubmit}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" value={formState.email}
+                <Form.Control name ="email" type="email" placeholder="Enter email" value={formState.email}
                   onChange={handleChange}/>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" value={formState.password}
+                <Form.Control name = "password" type="password" placeholder="Password" value={formState.password}
                   onChange={handleChange}/>
               </Form.Group>
               <Button variant="primary" type="submit">
