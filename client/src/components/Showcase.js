@@ -15,13 +15,13 @@ const Showcase = ({ news }) => {
   return (
     <Container className ="showcaseCon">
     <Row>
-      <Col sm={12} md={4} className = "trending">
+      <Col sm={12} md={4} lg={4} className = "trending">
 <Sports />
       </Col>
-      <Col sm={12} md={4} className = "headline">
+      <Col sm={12} md={4} lg={4}  className = "headline">
 <LatestNews />
       </Col>
-      <Col sm={12} md={4} className = "latest">
+      <Col sm={12} md={4} lg={4}  className = "latest">
 <Entertainment />
       </Col>
       
