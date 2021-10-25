@@ -75,9 +75,11 @@ const Profile = ({ userData }) => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
+    alert("Your information has been updated");
     try {
       const { data } = await updateUser({
         variables: { ...formState },
+        
       });
     } catch (e) {
       console.error(e);
