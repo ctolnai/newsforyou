@@ -23,7 +23,7 @@ function Sports() {
 
     return (
         <div>
-            <Card style={{ width: '18rem', height: 'auto', justifyContent: 'space-evenly', margin: '15px'}}>
+            <Card style={{ width: '18rem', height: 'auto', justifyContent: 'center', margin: '15px'}}>
                 <Card.Body className = "newscard">SPORTS</Card.Body>
             </Card>
             {articles.map(article => (

@@ -30,7 +30,7 @@ function Sports() {
             <Card style={{ width: '18rem', height: 'auto', justifyContent: 'center', margin: '15px', display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
                 <Card.Body style={{ backgroundColor: 'red' }}>Sports</Card.Body>
             </Card> 
-            <div style={{justifyContent: 'center', margin: '15px', display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
+            <div style={{justifyContent: 'center', margin: '15px', display:'flex',flexDirection:'row', flexWrap:'wrap'}}>
             {articles.map(article => (
                 <Card style={{ width: '18rem', height: 'auto', justifyContent: 'space-between', margin: '15px'}}>
                     <Card.Img variant="top" src={article.thumbnail} width="200" height="200"/>
@@ -51,3 +51,6 @@ function Sports() {
 }
 
 export default Sports;
+
+
+// flexDirection:'row'
