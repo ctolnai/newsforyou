@@ -91,7 +91,7 @@ const NavBar = () => {
             Dashboard
           </Nav.Link>:
           <Nav.Link eventKey={2} onClick={() => setModalShow(true)}>
-            Sign Up
+            Sign Up/Login
           </Nav.Link>
           }
           {/* <Nav.Link eventKey={2}  onClick={() => setModalShow(true)}> Login</Nav.Link> */}
