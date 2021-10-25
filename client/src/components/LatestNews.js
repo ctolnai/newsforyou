@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Card, Button } from 'react-bootstrap/';
 import { useQuery } from '@apollo/client';
 import { QUERY_ARTICLES_CATEGORY } from '../utils/queries';
+import { Link } from 'react-router-dom';
 
 function LatestNews() {
     useEffect(() => {
@@ -32,7 +33,8 @@ function LatestNews() {
                         <Card.Text>
                             {article.description}
                         </Card.Text>
-                        <Button variant="primary">View Full Article</Button>
+                        {/* <Button variant="primary">View Full Article</Button> */}
+                        <Link to={`/article/${article._id}`} variant="primary">View Full Article</Link>
                     </Card.Body>
                 </Card>
             ))
