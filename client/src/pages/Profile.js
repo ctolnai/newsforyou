@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { QUERY_SINGLE_USER } from '../utils/queries';
 import Auth from '../utils/auth';
+import NavBar from '../components/Navbar';
+import Header from '../components/Header';
 import { UPDATE_USER } from '../utils/mutations';
 import '../style.css';
 import {
@@ -17,6 +19,7 @@ import {
   Col,
   Form,
   Button,
+  Card,
   Stack
 } from 'react-bootstrap/';
 
@@ -24,18 +27,19 @@ import {
 const UserData = () => {
 
   const { loading, data } = useQuery(QUERY_SINGLE_USER);
-  const userData = !loading? data.userById: []
+  const userData = !loading ? data.userById : []
   if (loading) {
     return (<div> Loading... </div>)
   } {
     console.log(userData)
-  return (
-<Profile userData = {userData}/>
-  )}
+    return (
+      <Profile userData={userData} />
+    )
+  }
 }
 
 
-const Profile = ({userData}) => {
+const Profile = ({ userData }) => {
 
   // NEED TO RUN QUERY_USER AND RETURN DATA AS C_USERNAME C_EMAIL C_PASSWORD
   // THEN SET THE BELOW CODE TO SET THE DEFAULT VALUES TO THE RETURNED DATA
@@ -45,12 +49,12 @@ const Profile = ({userData}) => {
   // const userData = !loading? data.userById: []
 
 
-// , password: '' 
-  const [formState, setFormState] = useState({ username: '', email: ''});
+  // , password: '' 
+  const [formState, setFormState] = useState({ username: '', email: '' });
   const [updateUser, { error, data }] = useMutation(UPDATE_USER);
-  useEffect(() => {  
-    console.log(userData.username)  
-    setFormState({ username: userData.username, email: userData.email})
+  useEffect(() => {
+    console.log(userData.username)
+    setFormState({ username: userData.username, email: userData.email })
   }, [data])
 
 
@@ -71,9 +75,11 @@ const Profile = ({userData}) => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
+    alert("Your information has been updated");
     try {
       const { data } = await updateUser({
         variables: { ...formState },
+        
       });
     } catch (e) {
       console.error(e);
@@ -84,16 +90,42 @@ const Profile = ({userData}) => {
   return (
 
     <div>
+
+      <NavBar />
+      <Header />
+
+      <Card style={{ width: '18rem', height: 'auto', justifyContent: 'center', margin: '15px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+        <Card.Body style={{ backgroundColor: 'red' }}>Dashboard</Card.Body>
+      </Card>
+      <Form.Label style={{ margin: "10px" }}>Edit your username or email address below:</Form.Label>
+      <Form onSubmit={handleFormSubmit} style={{ margin: "20px" }}>
+        <Form.Group className="mb-3" controlId="formBasicUsername">
+          <Form.Label>Username</Form.Label>
+          <Form.Control name="username" type="username" placeholder="Enter username" value={formState.username}
+            onChange={handleChange} />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control name="email" type="email" placeholder="Enter email" value={formState.email}
+            onChange={handleChange} />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit Changes
+        </Button>
+      </Form>
+
+
+      {/* {error && (
             
               <Form onSubmit= {handleFormSubmit}>
              <Form.Group className="mb-3" controlId="formBasicUsername">
                 <Form.Label>Username</Form.Label>
-                <Form.Control type="username" placeholder="Enter username" value={formState.username}
+                <Form.Control name= "username" type="username" placeholder="Enter username" value={formState.username}
                   onChange={handleChange}/>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" value={formState.email}
+                <Form.Control name= "email" type="email" placeholder="Enter email" value={formState.email}
                   onChange={handleChange}/>
               </Form.Group>
               {/* <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -102,18 +134,12 @@ const Profile = ({userData}) => {
                   onChange={handleChange}/>
               </Form.Group> */}
               
-              <Button variant="primary" type="submit">
+              {/* <Button variant="primary" type="submit">
                 Submit
               </Button>
-            </Form>
-            
+            </Form> */}
 
-            {/* {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )} */}
-          </div>
+    </div>
   );
 
 
