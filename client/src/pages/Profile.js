@@ -99,12 +99,12 @@ const Profile = ({ userData }) => {
       <Form onSubmit={handleFormSubmit} style={{ margin: "20px" }}>
         <Form.Group className="mb-3" controlId="formBasicUsername">
           <Form.Label>Username</Form.Label>
-          <Form.Control type="username" placeholder="Enter username" value={formState.username}
+          <Form.Control name="username" type="username" placeholder="Enter username" value={formState.username}
             onChange={handleChange} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" value={formState.email}
+          <Form.Control name="email" type="email" placeholder="Enter email" value={formState.email}
             onChange={handleChange} />
         </Form.Group>
         <Button variant="primary" type="submit">
@@ -132,18 +132,11 @@ const Profile = ({ userData }) => {
                   onChange={handleChange}/>
               </Form.Group> */}
               
-              <Button variant="primary" type="submit">
+              {/* <Button variant="primary" type="submit">
                 Submit
               </Button>
-            </Form>
-            
+            </Form> */}
 
-            {/* {error && (
-
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )} */}
     </div>
   );
 
