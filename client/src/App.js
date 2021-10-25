@@ -20,6 +20,7 @@ import LatestNews from './pages/LatestNews'
 import Entertainment from './pages/Entertainment';
 import Politics from './pages/Politics';
 import Sports from './pages/Sports';
+import Article from './pages/Article';
 
 
 
@@ -72,6 +73,9 @@ function App() {
             </Route>
             <Route exact path="/sports">
               <Sports />
+            </Route>
+            <Route exact path="/article/:articleId">
+              <Article />
             </Route>
         </div>
         <Footer />
