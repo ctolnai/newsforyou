@@ -28,8 +28,8 @@ function LatestNews() {
             <NavBar />
             <Header />
            
-            <Card style={{ width: '18rem', height: 'auto', justifyContent: 'center', margin: '15px', display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
-                <Card.Body style={{ backgroundColor: 'red' }}>Latest News</Card.Body>
+            <Card style={{ width: '18rem', height: 'auto', justifyContent: 'center',margin: '18', display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
+                <Card.Body style={{ backgroundColor: 'red', }}>Latest News</Card.Body>
             </Card> 
             <div style={{justifyContent: 'center', margin: '15px', display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
             {articles.map(article => (
