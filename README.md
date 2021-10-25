@@ -21,7 +21,7 @@ When you load in the webpage you will be greeted by the homepage with a Navbar a
 
 Below is a screenshot of the Modal when you go to Sign Up/Login!
 
-![websitefrontpage](client/src/media/Images/readme/screen2.png);
+![websitefrontpage](client/src/media/Images/readme/screen2.png)
 
 
 This website was created using The following Technolgies
@@ -43,6 +43,8 @@ This website was created using The following Technolgies
  - Node
 
  - Express
+ 
+ - JSX
 
 
 
