@@ -20,7 +20,7 @@ When you load in the webpage you will be greeted by the homepage with a Navbar a
 * When the users Modal is closed he is then taken back to their dashboard
 
 
-* When the user goes to Dashboard the user can then change their Udername and Email
+* When the user goes to Dashboard the user can then change their Username and Email
 
 Below is a screenshot of the Modal when you go to Sign Up/Login!
 
