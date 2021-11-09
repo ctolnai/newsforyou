@@ -79,12 +79,10 @@ const NavBar = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto d-flex justify w-100" justify>
-          <Nav.Link href="/latestnews">Latest News</Nav.Link>
-          <Nav.Link href="/entertainment">Entertainment</Nav.Link>
-          <Nav.Link href="/politics">Politics</Nav.Link>
-          <Nav.Link eventKey={2} href="/sports">
-            Sports
-          </Nav.Link>
+          <Nav.Link href="/category/Latest News">Latest News</Nav.Link>
+          <Nav.Link href="/category/Entertainment">Entertainment</Nav.Link>
+          <Nav.Link href="/category/Politics">Politics</Nav.Link>
+          <Nav.Link href="/category/Sports">Sports</Nav.Link>
           {
             Auth.loggedIn() ? 
           <Nav.Link eventKey={2} href="/profile">

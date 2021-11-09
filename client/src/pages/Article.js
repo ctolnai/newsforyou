@@ -16,6 +16,7 @@ function Article() {
     })
 
     const {articleId} = useParams();
+    
 
     const { loading, data } = useQuery(QUERY_SINGLE_ARTICLE, {
         // pass URL parameter
