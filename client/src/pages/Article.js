@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Card, Button} from 'react-bootstrap/';
-import { Redirect, useParams } from 'react-router-dom';
+import { Card } from 'react-bootstrap/';
+import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_SINGLE_ARTICLE } from '../utils/queries';
 
@@ -35,13 +35,11 @@ function Article() {
             <Header />
   
                 <Card style={{ width: 'auto', height: 'auto', justifyContent: 'space-between', margin: '15px'}}>
-                    {/* <Card.Img variant="top" src={article.thumbnail}  width="200" height="200"/> */}
                     <Card.Body>
                         <Card.Title>{article.title}</Card.Title>
                         <Card.Text>
                             {article.article_body}
                         </Card.Text>
-                        {/* <Button variant="primary">View Full Article</Button> */}
                     </Card.Body>
                 </Card>                      
             </div>

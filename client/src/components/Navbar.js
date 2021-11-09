@@ -1,17 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '../style.css';
-import {
-  Navbar,
-  Container,
-  Nav,
-  NavDropdown,
-  Modal,
-  Button,
-  Form,
-} from 'react-bootstrap/';
+import { Navbar, Nav, Modal, Button,} from 'react-bootstrap/';
 import Signup from '../pages/Signup';
 import Auth from '../utils/auth';
 import Login from '../pages/Login';
@@ -92,7 +82,6 @@ const NavBar = () => {
             Sign Up/Login
           </Nav.Link>
           }
-          {/* <Nav.Link eventKey={2}  onClick={() => setModalShow(true)}> Login</Nav.Link> */}
           <MyVerticallyCenteredModal
             show={modalShow}
             onHide={() => setModalShow(false)}
@@ -107,20 +96,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-// return (
-
-// const user = null;
-
-//     <Toolbar className={classes.toolbar}>
-//       {user?.result ? (
-//         <div className={classes.profile}>
-
-//           <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
-//         </div>
-//       ) : (
-//         <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
-//       )}
-//     </Toolbar>
-//   </AppBar>
-// );

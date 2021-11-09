@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import '../style.css'
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap/';
+import { Navbar, Nav } from 'react-bootstrap/';
 
 const profileNav = () => {
     return (
