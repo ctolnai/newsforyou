@@ -21,6 +21,7 @@ import Entertainment from './pages/Entertainment';
 import Politics from './pages/Politics';
 import Sports from './pages/Sports';
 import Article from './pages/Article';
+import Category from './pages/Category'
 
 
 
@@ -62,17 +63,8 @@ function App() {
             <Route exact path="/profile">
               <UserData />
             </Route>
-            <Route exact path="/latestnews">
-              <LatestNews />
-            </Route>
-            <Route exact path="/entertainment">
-              <Entertainment />
-            </Route>
-            <Route exact path="/politics">
-              <Politics />
-            </Route>
-            <Route exact path="/sports">
-              <Sports />
+            <Route exact path="/category/:category">
+              <Category />
             </Route>
             <Route exact path="/article/:articleId">
               <Article />
