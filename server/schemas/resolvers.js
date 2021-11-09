@@ -103,7 +103,11 @@ const resolvers = {
           runValidators: true,
         }
       );
-    }
+    },
+    addComment: async (parent, { comment_body, datePublished, author }) => {
+      const comment = await Comment.create({ comment_body, datePublished, author });
+      return { comment };
+    },
   },
 };
 

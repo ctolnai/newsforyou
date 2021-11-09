@@ -6,6 +6,7 @@ import { QUERY_SINGLE_ARTICLE } from '../utils/queries';
 
 import NavBar from '../components/Navbar'
 import Header from '../components/Header'
+import Comments from '../components/Comments'
 
 
 
@@ -43,7 +44,10 @@ function Article() {
                         {/* <Button variant="primary">View Full Article</Button> */}
                     </Card.Body>
                 </Card>                      
+                <Comments />
+                
             </div>
+            
 
     )
 }
