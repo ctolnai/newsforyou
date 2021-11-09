@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-// USER QUERIES
+
 export const QUERY_USERS = gql`
   query users {
     users {
@@ -23,8 +23,7 @@ export const QUERY_SINGLE_USER = gql`
     }
   }
 `;
-// ARTICLE QUERIES
-// need to add likes and comments later, currently erroring when requested
+
 export const QUERY_ARTICLES = gql`
   query articles {
     articles {
@@ -54,7 +53,7 @@ export const QUERY_SINGLE_ARTICLE = gql`
     }
   }
 `;
-//COMMENT QUERIES
+
 export const QUERY_COMMENTS = gql`
   query comments {
     comments {

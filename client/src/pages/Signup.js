@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-import { Navbar, Container, Nav, NavDropdown, Modal, Button, Form } from 'react-bootstrap/';
+import { Button, Form } from 'react-bootstrap/';
 
 import Auth from '../utils/auth';
 

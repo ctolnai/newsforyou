@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
-import { Navbar, Container, Nav, NavDropdown, Modal, Button, Form } from 'react-bootstrap/';
+import { Button, Form } from 'react-bootstrap/';
 
 import Auth from '../utils/auth';
 
@@ -13,7 +13,6 @@ console.log(formState)
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
-  // update state based on form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -23,7 +22,7 @@ console.log(formState)
     });
   };
 
-  // submit form
+  
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
@@ -37,7 +36,6 @@ console.log(formState)
       console.error(e);
     }
 
-    // clear form values
     setFormState({
       email: '',
       password: '',

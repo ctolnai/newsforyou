@@ -8,23 +8,13 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-
-
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import UserData from './pages/Profile';
-import Header from './components/Header';
 import Footer from './components/Footer';
-import LatestNews from './pages/LatestNews'
-import Entertainment from './pages/Entertainment';
-import Politics from './pages/Politics';
-import Sports from './pages/Sports';
 import Article from './pages/Article';
 import Category from './pages/Category'
-
-
-
 
 const httpLink = createHttpLink({
   uri: '/graphql',

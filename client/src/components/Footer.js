@@ -4,10 +4,6 @@ import { Nav } from 'react-bootstrap/';
 const style = { color: "white", fontSize: "1em" }
 
 
-const divStyle = {
-    paddingTop: "20px",
-    margin: "0 auto"
-};
 
 function Footer() {
     return (
