@@ -19,6 +19,9 @@ When you load in the webpage you will be greeted by the homepage with a Navbar a
 
 * When the users Modal is closed he is then taken back to their dashboard
 
+
+* When the user goes to Dashboard the user can then change their Username and Email
+
 Below is a screenshot of the Modal when you go to Sign Up/Login!
 
 ![websitefrontpage](client/src/media/Images/readme/screen2.png)
@@ -46,6 +49,9 @@ This website was created using The following Technolgies
  
  - JSX
 
+Links
 
 
+https://blooming-mesa-06853.herokuapp.com/
 
+https://github.com/ctolnai/newsforyou
