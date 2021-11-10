@@ -40,7 +40,7 @@ const CommentForm = ({ articleId }) => {
   };
 
   return (
-    <div>
+    <div style={{ padding: '1rem' }}>
       <h4>What are your thoughts on this article?</h4>
 
       {Auth.loggedIn() ? (
