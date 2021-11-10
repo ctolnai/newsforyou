@@ -15,7 +15,6 @@ import CommentDisplay from '../components/CommentDisplay'
 function Article() {
 
     useEffect(() => {
-        console.log(data)
     })
 
     const {articleId} = useParams();

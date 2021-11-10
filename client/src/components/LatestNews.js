@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 
 function LatestNews() {
     useEffect(() => {
-        console.log(articles)
     })
 
     const { loading, data } = useQuery(QUERY_ARTICLES_CATEGORY, {
