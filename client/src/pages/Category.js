@@ -28,9 +28,8 @@ function Category() {
         <div>
             <NavBar />
             <Header />
-           
-            <Card style={{ width: '18rem', height: 'auto', justifyContent: 'center', margin: '15px', display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
-                <Card.Body style={{ backgroundColor: 'red' }}>{category}</Card.Body>
+            <Card className="mx-auto" style={{ width: '18rem', height: 'auto', justifyContent: 'center', margin: '15px', display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
+                <Card.Body className='newscard' style={{ backgroundColor: 'red', fontSize: '2rem'  }}>{category}</Card.Body>
             </Card> 
             <div style={{justifyContent: 'center', margin: '15px', display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
             {articles.map(article => (

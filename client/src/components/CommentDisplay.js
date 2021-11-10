@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommentDisplay = ({ comments = [] }) => {
   if (!comments.length) {
-    return <h3>No Comments Yet</h3>;
+    return <h3 style={{ padding: '1rem' }}>No Comments Yet</h3>;
   }
 
   return (
