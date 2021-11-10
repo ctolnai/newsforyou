@@ -104,9 +104,22 @@ const resolvers = {
         }
       );
     },
-    addComment: async (parent, { comment_body, datePublished, author }) => {
-      const comment = await Comment.create({ comment_body, datePublished, author });
-      return { comment };
+    addComment: async (parent, { articleId, comment_body }, context) => {
+      if (context.user) {
+        return Article.findOneAndUpdate(
+          { _id: articleId },
+          {
+            $addToSet: {
+              comments: { comment_body, author: context.user.username },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
 };

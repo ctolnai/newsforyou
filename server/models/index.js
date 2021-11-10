@@ -4,4 +4,4 @@ const Tag = require('./Tag');
 const Comment = require('./Comment');
 
 
-module.exports = { User, Article, Tag, Comment };
+module.exports = { User, Article, Tag };
