@@ -13,7 +13,7 @@ const CommentDisplay = ({ comments = [] }) => {
       >
         Comments
       </h3>
-      <div className="flex-row my-4">
+      <div className="flex-row my-4" style={{ padding: '1rem' }}>
         {comments &&
           comments.map((comment) => (
             <div key={comment._id} className="col-12 mb-3 pb-3">
