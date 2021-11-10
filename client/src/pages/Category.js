@@ -9,7 +9,6 @@ import Header from '../components/Header'
 
 function Category() {
     useEffect(() => {
-        console.log(articles)
     })
 
     const {category} = useParams();
