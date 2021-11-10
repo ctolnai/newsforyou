@@ -6,6 +6,7 @@ import { QUERY_SINGLE_ARTICLE } from '../utils/queries';
 
 import NavBar from '../components/Navbar'
 import Header from '../components/Header'
+import Comments from '../components/Comments'
 
 
 
@@ -42,7 +43,10 @@ function Article() {
                         </Card.Text>
                     </Card.Body>
                 </Card>                      
+                <Comments />
+                
             </div>
+            
 
     )
 }

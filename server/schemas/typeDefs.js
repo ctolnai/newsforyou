@@ -35,8 +35,6 @@ const typeDefs = gql`
     author: String
   }
 
-
-
   type Tag {
     _id: ID
     name: String
@@ -65,6 +63,7 @@ const typeDefs = gql`
     removeUser(id: ID!): User
     updateUserPreferences(id: ID!, preferences: [String!]): User
     updateUser(username: String, email: String, password: String): User
+    addComment(comment_body: String!, datePublished: String!, author: String!): Comment
   }
 `;
 
