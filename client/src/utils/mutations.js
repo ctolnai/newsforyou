@@ -44,3 +44,23 @@ mutation updateUser($username: String, $email: String, $password: String) {
   }
 }
 `;
+
+export const ADD_COMMENT = gql`
+  mutation addComment($articleId: ID!, $comment_body: String!) {
+    addComment(articleId: $articleId, comment_body: $comment_body) {
+      _id
+      title
+      author
+      description
+      thumbnail
+      article_body
+      datePublished
+      category
+      comments {
+        _id
+        comment_body
+        datePublished
+      }
+    }
+  }
+`;

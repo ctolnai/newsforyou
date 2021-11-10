@@ -50,6 +50,13 @@ export const QUERY_SINGLE_ARTICLE = gql`
         article_body
         datePublished
         category
+        comments {
+          _id
+          comment_body
+          datePublished
+          author
+        }
+        
     }
   }
 `;

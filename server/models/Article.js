@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat')
 
 const articleSchema = new Schema(
   {
@@ -46,10 +47,29 @@ const articleSchema = new Schema(
     ],
     comments: [
       {
-        type: Schema.Types.ObjectId,
-        ref: 'Comment'
-      }
-    ]
+        comment_body: {
+          type: String,
+          required: true,
+          trim: true
+        },
+        datePublished: {
+          type: Date,
+          default: Date.now,
+          get: (timestamp) => dateFormat(timestamp),
+        },
+        author: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        likes: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'User'
+            }
+        ],
+      },
+    ],
   }
 );
 

@@ -6,7 +6,9 @@ import { QUERY_SINGLE_ARTICLE } from '../utils/queries';
 
 import NavBar from '../components/Navbar'
 import Header from '../components/Header'
-import Comments from '../components/Comments'
+import CommentForm from '../components/CommentForm'
+import CommentDisplay from '../components/CommentDisplay'
+
 
 
 
@@ -43,7 +45,8 @@ function Article() {
                         </Card.Text>
                     </Card.Body>
                 </Card>                      
-                <Comments />
+                <CommentForm articleId={article._id}/>
+                <CommentDisplay comments={article.comments}/>
                 
             </div>
             
