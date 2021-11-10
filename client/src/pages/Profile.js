@@ -2,6 +2,7 @@ import React, { useState, useReducer, useEffect } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_SINGLE_USER } from '../utils/queries';
 import NavBar from '../components/Navbar';
+import NavbarLogout from '../components/NavbarLogout';
 import Header from '../components/Header';
 import { UPDATE_USER } from '../utils/mutations';
 import '../style.css';
@@ -59,7 +60,7 @@ const Profile = ({ userData }) => {
 
     <div>
 
-      <NavBar />
+      <NavbarLogout />
       <Header />
 
       <Card style={{ width: '18rem', height: 'auto', justifyContent: 'center', margin: '15px', display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
