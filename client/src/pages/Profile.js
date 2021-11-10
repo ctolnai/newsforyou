@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useReducer, useEffect } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_SINGLE_USER } from '../utils/queries';
 import NavBar from '../components/Navbar';
@@ -15,10 +15,10 @@ const UserData = () => {
   if (loading) {
     return (<div> Loading... </div>)
   } 
-    console.log(userData)
     return (
       <Profile userData={userData} />
     )
+  
 }
 
 
@@ -27,7 +27,6 @@ const Profile = ({ userData }) => {
   const [formState, setFormState] = useState({ username: '', email: '' });
   const [updateUser, { data }] = useMutation(UPDATE_USER);
   useEffect(() => {
-    console.log(userData.username)
     setFormState({ username: userData.username, email: userData.email })
   }, [data])
 
@@ -46,7 +45,7 @@ const Profile = ({ userData }) => {
     console.log(formState);
     alert("Your information has been updated");
     try {
-       await updateUser({
+      await updateUser({
         variables: { ...formState },
 
       });
